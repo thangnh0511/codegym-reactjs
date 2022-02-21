@@ -16,8 +16,19 @@ const anotherObj = {
 
 //1. Hãy clone 2 đối tượng trên bằng tất cả các cách mà bạn biết
 // *YOUR CODE HERRE *
+const cloneObj1 = {...obj};
+
+const cloneObj2 = {} ;
+for(let i in obj) {
+  cloneObj2[i] = obj[i];
+}
+
+const cloneObj3 = Object.assign({}, obj);
 
 
+console.log(cloneObj1) ;
+console.log(cloneObj2) ;
+console.log(cloneObj3) ;
 
 
 //2. Đoán thử kết quả sau đây, không chạy thử
@@ -25,12 +36,15 @@ const copiedObj = obj;
 copiedObj.skills = ['React', 'Typescript'];
 console.log(obj.skills);
 // * YOUR ANSWER HERE *
-
+//  => ['React', 'Typescript']
 
 
 //3. Hãy merge 2 đối tượng đã cho thành 1 đối tượng mới bằng tất cả các cách mà bạn biết
 // *YOUR CODE HERRE *
+const mergeObj1 = {...obj, ...anotherObj};
 
+const mergeObj2 = {};
+Object.assign(mergeObj2, obj, anotherObj);
 
 
 //4.  Sử dụng Map trong ES6, hãy tạo ra 1 biến có giá trị như sau:
@@ -42,13 +56,21 @@ console.log(obj.skills);
 ]
 */
 // *YOUR CODE HERRE *
+const newMap = new Map([
+  ["whole numbers", [1 ,2 ,3 ,4]],
+  ["Decimal numbers", [1.1, 1.2, 1.3, 1.4]],
+  ["negative numbers", [-1, -2, -3, -4]]
+]);
 
 
 
 
 //5. Sử dụng Map trong ES6, hãy tạo ra 1 map từ 2 đối tượng đã cho trên
 // *YOUR CODE HERRE *
-
+const mergeObj3 = new Map([
+  [1,obj],
+  [2,anotherObj]
+]);
 
 
 

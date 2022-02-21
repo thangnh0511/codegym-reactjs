@@ -44,8 +44,13 @@ const traineeIterator = [
   }
 ];
 
+
 //1. Sử dụng forEach(), hãy console.log() ra full name (firstName + lastName) của tất cả các phần từ trong mảng trên
 // *YOUR CODE HERRE *
+let msg = (id) => {
+  return document.getElementById(id)
+} 
+
 console.log(`======================  1  =================`);
 
 let renderFullName = (arr) => {
@@ -53,7 +58,7 @@ let renderFullName = (arr) => {
     console.log(`${Element.firtName} ${Element.lastName}`);
   })
 } 
-renderFullName(traineeIterator);
+// renderFullName(traineeIterator);
 
 //2. Sử dụng forEach(), hãy console.log() ra điểm số (grade) + full name (trong cùng 1 string, format: D Hoang / F) 
 //của tất cả các phần từ trong mảng trên
@@ -66,6 +71,7 @@ let renderGradeByName = (arr) => {
   })
 }
 renderGradeByName(traineeIterator);
+
 
 //3. Sử dụng map(), hãy tạo ra 1 mảng mới với tên gọi expectedTraineeArray, 
 //trong đó các props của từng phần tử được đổi như sau:
@@ -315,3 +321,5 @@ function newArray(arr) {
 }
 
 console.log(newArray(traineeIterator));
+
+// ========================
